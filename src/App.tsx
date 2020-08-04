@@ -2,20 +2,23 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import theme from "./theme/theme";
+import Demo from "./components/Demo";
 
 const App: React.FunctionComponent = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Container>Hello Rachael</Container>
+      <Container>
+        Hello Rachael
+        <Demo />
+      </Container>
     </ThemeProvider>
   );
 };
 
 const Container = styled.div(
   ({ theme }) => `
-  width: 100%;
-  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: ${theme.colors.base};
