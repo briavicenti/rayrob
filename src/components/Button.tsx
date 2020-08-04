@@ -28,6 +28,17 @@ const StyledButton = styled.button<{ buttonType: ButtonType }>(
   color:${theme.colors.white};
   border: none;
   height: ${theme.spacings[5]};
+  border-radius: 4px;
+
+  &:hover {
+    background-color: ${theme.colors.white};
+    color: ${
+      buttonType === "primary" ? theme.colors.primary : theme.colors.secondary
+    };
+    box-shadow: 0px 0px 0px 1px inset ${
+      buttonType === "primary" ? theme.colors.primary : theme.colors.secondary
+    }
+  }
 
   &:focus {
     outline: none;

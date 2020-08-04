@@ -23,6 +23,7 @@ const Container = styled.div(
   justify-content: center;
   background-color: ${theme.colors.base};
   color: ${theme.colors.primary};
+  font-size:${theme.fontSizes.title};
 `
 );
 
